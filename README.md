@@ -1,3 +1,3 @@
-# Strukturno-C
-Labs
+# Labs 
+
 Од мрза не се средени
