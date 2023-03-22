@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <ctype.h>
+
+void writeToFile() {
+    FILE *f = fopen("text.txt", "w");
+    char c;
+    while((c = getchar()) != '#') {
+        fputc(c, f);
+    }
+    fclose(f);
+}
+
+int main() {
+    writeToFile();
+    FILE * f=fopen("text.txt", "r");
+    float frekvencijaM,frekvencijaG;
+    
+    char sega;
+    int M=0,G=0,l=0;
+    while(!feof(f))
+    {
+        sega=fgetc(f);
+        if(isalpha(sega))
+        {
+            l++;
+            if(islower(sega)==0)
+            G++;
+            else
+            M++;
+        }
+        frekvencijaM=(M*1.0)/l;
+        frekvencijaG=(G*1.0)/l;
+    }
+        printf("%.4lf\n", frekvencijaG);
+        printf("%.4lf\n", frekvencijaM);
+        fclose(f);
+        return 0;
+    }

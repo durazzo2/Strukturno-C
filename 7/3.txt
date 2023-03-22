@@ -1,0 +1,36 @@
+#include <stdio.h>
+int main(){
+    int n,i,j;
+    int a[100][100];
+    int b[100][100];
+    scanf ("%d",&n);
+    if (n%2==1){
+        printf ("GRESKA");
+    }
+    else {
+    for (i=0;i<n;i++){
+        for (j=0;j<n;j++){
+            scanf ("%d",&a[i][j]);
+        }
+    }
+
+    for (i=0;i<n/2;i++){
+        for (j=0;j<n/2;j++){
+            int P11 = a[i][j];
+            int P12 = a[i][n-j-1];
+            int P13 = a[n-i-1][j];
+            int P14 = a[n-i-1][n-j-1];
+            int zbir = P11+P12+P13+P14;
+            b[i][j]=zbir;
+        }
+    }
+    for (i=0;i<n/2;i++){
+        for (j=0;j<n/2;j++){
+            printf ("%d ",b[i][j]);
+        }
+        printf("\n");
+    }
+    
+    
+    
+}}

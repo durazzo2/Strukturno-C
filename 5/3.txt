@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main (){
+    int cas,min,sec;
+    char s;
+    scanf ("%d%d%d %c",&cas,&min,&sec,&s);
+    if (s=='A'){
+        if (cas==12){
+            cas-=12;
+         printf ("%02d:%02d:%02d",cas,min,sec);   
+        } else{
+        printf ("%02d:%02d:%02d",cas,min,sec);
+        return 0;
+    }}
+    
+    if (s=='P') {
+        if (cas==12){
+        printf ("%02d:%02d:%02d",cas,min,sec);
+        return 0;
+    }
+     cas=cas+12;
+     printf ("%02d:%02d:%02d",cas,min,sec);
+     
+     
+    }
+    
+   
+}

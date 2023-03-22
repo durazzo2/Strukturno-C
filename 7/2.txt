@@ -1,0 +1,36 @@
+#include <stdio.h>
+int main(){
+    int n,m,a[100][100];
+    int i,j;
+    int sim=0;
+    scanf ("%d%d",&n,&m);
+    for (i=0;i<n;i++){
+        for (j=0;j<m;j++){
+            scanf ("%d",&a[i][j]);
+        }
+    }
+    for (i=0;i<n;i++){
+        for (j=0;j<m;j++){
+            if (a[i][j]!=a[j][i]){
+                sim=1;
+                break;
+            }
+        }
+    }
+    if (sim==1){
+        printf ("-1");
+        printf ("\n");
+    }
+    else {
+        printf ("1");
+        printf ("\n");
+    }
+    for (i=0;i<n;i++){
+        for (j=0;j<m;j++){
+            printf  ("%d ",a[i][j]);
+        }
+        printf ("\n");
+    }
+    
+     
+}
